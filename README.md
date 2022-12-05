@@ -1,11 +1,13 @@
+---
+<p align="center"><img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" width="600" height="300"  /></p>
 
-<p align="center"><img src="./309537786_10217874849142215_2220708470214293336_n.jpg" width="300"/></p>
 <p align="center">
 <a href="https://www.linkedin.com/in/patrick-pfenning"><img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"></a>
+<img src="https://komarev.com/ghpvc/?username=ppfenning&style=for-the-badge&color=blue" alt="">
 </p>
-<p align="center"><img src="https://komarev.com/ghpvc/?username=ppfenning&style=flat-square&color=blue" alt=""></p>
+<p align="center"></p>
 
-<p align="center"><img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" width="600" height="300"  /></p>
+---
 
 ### :man_technologist: &nbsp;About Me :
 
