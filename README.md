@@ -1,5 +1,5 @@
 
-<p align="center"><img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/></p>
+<p align="center"><img src="./309537786_10217874849142215_2220708470214293336_n.jpg" width="300"/></p>
 <p align="center">
 <a href="https://www.linkedin.com/in/patrick-pfenning"><img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"></a>
 </p>
