@@ -13,7 +13,7 @@
 
 I am a Data Engineer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> from Vermont.
 
-- 🔭 I’m searching for a full time remote role as Data Engineer.
+- 🔭 I currently work remotely for [BlastPoint](https://blastpoint.com/)!
 - 🎓 I have a BS in Applied Mathematics and an MS in Data Science from Wentworth Institute of Technology.
 - 💪 My strengths lie with Python, SQL and Apache Tools.
 - 📫 How to reach me: &nbsp; [![Linkedin Badge](https://img.shields.io/badge/patrick-pfenning-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/patrick-pfenning) [![GMail Badge](https://img.shields.io/badge/pfenningpat-D14836?style=flat&logo=gmail&logoColor=white)](mailto:pfenningpat@gmail.com)
