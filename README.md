@@ -14,9 +14,8 @@
 I am a Data Engineer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> from Vermont.
 
 - 🔭 I’m searching for a full time remote role as Data Engineer.
-- 🎓 I have a BS in Applied Mathematics.
-- 🌱 I am working toward my MS in Data Science.
-- 💪 My strengths lie with Python and SQL, ideally with large distributed systems.
+- 🎓 I have a BS in Applied Mathematics and an MS in Data Science from Wentworth Institute of Technology.
+- 💪 My strengths lie with Python, SQL and Apache Tools.
 - 📫 How to reach me: &nbsp; [![Linkedin Badge](https://img.shields.io/badge/patrick-pfenning-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/patrick-pfenning) [![GMail Badge](https://img.shields.io/badge/pfenningpat-D14836?style=flat&logo=gmail&logoColor=white)](mailto:pfenningpat@gmail.com)
 
 ---
@@ -42,8 +41,8 @@ I am a Data Engineer <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/
 <img src="https://github.com/devicons/devicon/blob/master/icons/raspberrypi/raspberrypi-original.svg" title="raspberrypi" alt="raspberrypi" width="40" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/tensorflow/tensorflow-original.svg" title="tensorflow" alt="tensorflow" width="40" height="40"/>&nbsp;
 <img src="https://github.com/devicons/devicon/blob/master/icons/ubuntu/ubuntu-plain.svg" title="ubuntu" alt="ubuntu" width="40" height="40"/>&nbsp;
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" width="40" height="40"/>                
-</p>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" title="terraform" alt="terraform" width="40" height="40"/>&nbsp;
+<img src="https://github.com/devicons/devicon/blob/master/icons/apache/apache-original-wordmark.svg" title="apache" alt="apache" width="40" height="40"/>&nbsp;
 
 ---
 
