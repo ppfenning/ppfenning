@@ -5,14 +5,29 @@ platforms in Python, Spark, and Terraform, and lately the governance layer
 that lets LLM agents do real engineering work without anyone having to trust
 them blindly.
 
-## The agent substrate
+## The agent platform
 
-Two repos, one thesis: **agents should earn autonomy the way engineers do —
-by track record, in writing, revocably.**
+Four repositories, one thesis: **agents should earn autonomy the way engineers
+do — by track record, in writing, revocably.** Each is usable alone; together
+they read as one sentence. Cartridges say who a run works for, graphs say what
+runs, cast says who speaks, and the voice HUD is where you hear and see it.
+
+```mermaid
+flowchart LR
+    CART["agent-cartridges<br/>who a run works for<br/>roles → skills · tier → model · where writes land"]
+    GRAPHS["agent-graphs<br/>what runs, and the harness that runs it<br/>sequence · the gate · the ledger · worktrees"]
+    CAST["agent-cast<br/>who speaks<br/>eight seats · write authority · voices"]
+    HUD["agent-voice-hud<br/>where you hear and see it<br/>wake word · org ring · /work and /tasks"]
+    CART -- "roles, tiers" --> GRAPHS
+    CAST -- "seats bound by a cartridge's cast: block" --> CART
+    GRAPHS -- "run records, usage, ledger" --> HUD
+    CAST -- "personas light the ring" --> HUD
+```
 
 [**agent-cartridges**](https://github.com/ppfenning/agent-cartridges) ·
 [**agent-graphs**](https://github.com/ppfenning/agent-graphs) ·
-[the architecture, drawn](https://claude.ai/code/artifact/bbb368b7-c6cb-46d0-b0b7-f580fb5fc769)
+[**agent-cast**](https://github.com/ppfenning/agent-cast) ·
+[**agent-voice-hud**](https://github.com/ppfenning/agent-voice-hud)
 
 - A **graph** owns sequence and writes nothing; one **harness** owns every
   consequence — the gate, the worktree, the checks, the append-only ledger. A
@@ -25,13 +40,17 @@ by track record, in writing, revocably.**
   phases in dependency order, tasks fanned out in parallel worktrees — with
   **no code path that merges to main**. The irreversible act is priced by
   target, not by operation.
-- **Portability is enforced by a test**, not by intention: it fails the build
-  on any employer-shaped constant, and it was verified by planting a
-  deliberately-bad graph and watching nine checks fire. A check nobody has
-  watched fail is not a check.
-- The whole suite — 366 tests across both repos — runs offline, with no
-  network and no API key, against a scripted runner. Clean-room provenance is
-  [documented, dated, and public](https://github.com/ppfenning/agent-cartridges/blob/main/docs/PROVENANCE.md).
+- **Two runners, one contract.** Nodes run against the Messages API, or as
+  headless Claude Code sessions on a subscription with per-role tool grants,
+  a disposable scratch tree for the builder, dollar ceilings per tier, and a
+  turn-by-turn trace. Every run writes what each node cost.
+- **A standing cast of eight seats** — recon, triage, review, build, ops,
+  the board, writing, the scribe — defined with no employer inside them, and
+  bound to a team's skills by a cartridge. The chief of staff is the session
+  you are talking to. Voice is decoration: every seat works typed.
+- **Portability is enforced by tests**, not by intention: the graphs fail on
+  any employer-shaped constant, and the cast's CI fails on any vendor named.
+  The whole suite runs offline against a scripted runner.
 
 ## Before that
 
