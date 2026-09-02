@@ -27,7 +27,8 @@ flowchart LR
 [**agent-cartridges**](https://github.com/ppfenning/agent-cartridges) ·
 [**agent-graphs**](https://github.com/ppfenning/agent-graphs) ·
 [**agent-cast**](https://github.com/ppfenning/agent-cast) ·
-[**agent-voice-hud**](https://github.com/ppfenning/agent-voice-hud)
+[**agent-voice-hud**](https://github.com/ppfenning/agent-voice-hud) ·
+[**the platform, drawn**](https://claude.ai/code/artifact/bbb368b7-c6cb-46d0-b0b7-f580fb5fc769)
 
 - A **graph** owns sequence and writes nothing; one **harness** owns every
   consequence — the gate, the worktree, the checks, the append-only ledger. A
