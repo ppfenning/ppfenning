@@ -36,15 +36,18 @@ by track record, in writing, revocably.**
 ## Before that
 
 Three years at BlastPoint (2023–2026) owning a customer-intelligence data
-platform end to end: a bronze/silver/gold lakehouse across 40+ client AWS
-accounts, the SageMaker inference layer the data science team's models ran
-on, the Terraform behind the fleet, and incident response when production ML
-broke. Led the pandas→Spark migration and trained the team through it; put
-LLM agents into the on-call loop for first-pass triage and PR review because
-the alert volume justified it.
+platform end to end. The centerpiece was the ingestion and load path: delta
+ingestion from client feeds we didn't control, fanned out across 40+ AWS
+accounts into a bronze/silver/gold lakehouse built in PySpark and Arrow, with
+data-quality gates that fail a run rather than pass bad data downstream. Led
+the pandas→Spark migration and trained the team through it; owned the
+Terraform behind the fleet; led incident response when production broke.
+Mentored engineers through code review, pairing, and incident coaching —
+several earned promotions on the way. Put LLM agents into the on-call loop
+for first-pass triage and PR review because the alert volume justified it.
 
-**Stack:** Python · SQL · PySpark · AWS (S3, Batch, Step Functions,
-SageMaker, Athena) · Terraform (multi-account via AFT) · Airflow ·
+**Stack:** Python · SQL · PySpark · PyArrow · AWS (S3, Batch, Step
+Functions, Athena) · Terraform (multi-account via AFT) · Airflow ·
 Docker · PostgreSQL · Snowflake · GitHub Actions
 
 ## Elsewhere
