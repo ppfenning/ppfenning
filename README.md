@@ -7,7 +7,7 @@ them blindly.
 
 ## The agent platform
 
-Four repositories, one thesis: **agents should earn autonomy the way engineers
+Five repositories, one thesis: **agents should earn autonomy the way engineers
 do — by track record, in writing, revocably.** Each is usable alone; together
 they read as one sentence. Cartridges say who a run works for, graphs say what
 runs, cast says who speaks, and the voice HUD is where you hear and see it.
@@ -18,16 +18,21 @@ flowchart LR
     GRAPHS["agent-graphs<br/>what runs, and the harness that runs it<br/>sequence · the gate · the ledger · worktrees"]
     CAST["agent-cast<br/>who speaks<br/>eight seats · write authority · voices"]
     HUD["agent-voice-hud<br/>where you hear and see it<br/>wake word · org ring · /work and /tasks"]
+    TOOLS["agent-tools<br/>what the seats run so they do not have to think<br/>run records · traces · cleanup · the HUD · plans"]
     CART -- "roles, tiers" --> GRAPHS
     CAST -- "seats bound by a cartridge's cast: block" --> CART
     GRAPHS -- "run records, usage, ledger" --> HUD
     CAST -- "personas light the ring" --> HUD
+    TOOLS -- "reads" --> GRAPHS
+    TOOLS -- "posts" --> HUD
+    CAST -- "seats route to tools by name" --> TOOLS
 ```
 
 [**agent-cartridges**](https://github.com/ppfenning/agent-cartridges) ·
 [**agent-graphs**](https://github.com/ppfenning/agent-graphs) ·
 [**agent-cast**](https://github.com/ppfenning/agent-cast) ·
 [**agent-voice-hud**](https://github.com/ppfenning/agent-voice-hud) ·
+[**agent-tools**](https://github.com/ppfenning/agent-tools) ·
 [**the platform, drawn**](https://claude.ai/code/artifact/bbb368b7-c6cb-46d0-b0b7-f580fb5fc769)
 
 - A **graph** owns sequence and writes nothing; one **harness** owns every
@@ -49,6 +54,10 @@ flowchart LR
   the board, writing, the scribe — defined with no employer inside them, and
   bound to a team's skills by a cartridge. The chief of staff is the session
   you are talking to. Voice is decoration: every seat works typed.
+- **Deterministic work is a tool, not a turn.** Summing a run's cost, counting
+  what a traced node did, cleaning up after a run, posting to the HUD: each is a
+  tested function a seat calls, so no tokens are spent producing the same answer
+  twice.
 - **Portability is enforced by tests**, not by intention: the graphs fail on
   any employer-shaped constant, and the cast's CI fails on any vendor named.
   The whole suite runs offline against a scripted runner.
