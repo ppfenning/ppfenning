@@ -15,21 +15,28 @@ blindly.
 [**PyPI**](https://pypi.org/project/coxswain-tools/)
 
 Coxswain builds software with a crew of AI agents and keeps a person on the
-tiller. You describe a change; it is filed as a work item, planned, built in a
-worktree under a dollar budget, reviewed by two independent reviewers who are
-made to disagree, arbitrated, checked against the project's own tests as
-evidence, and handed back as a pull request. Every step leaves a record you can
-read.
+tiller. You describe a change; it is filed as a work item, sized (one ticket, or
+an epic broken into phases and tasks), planned, built in its own worktree under
+a dollar budget, linted and run against the project's own tests before a
+reviewer spends a token, reviewed by two independent reviewers who are made to
+disagree, arbitrated, validated against measured evidence rather than the
+builder's word, and handed back as a pull request. A cartridge's *gate* says
+how far the harness may go on its own; the default is `ticket`: it proposes, a
+person merges. One session holds the leader lock and drives the landing loop;
+every run leaves a record you can read, drill into, and get a notification
+from.
 
 ```sh
-uv tool install coxswain-tools
+uv tool install coxswain-tools     # or: brew install ppfenning/coxswain/cox
 cox setup doctor
+cox                                # the coxswain session: file, launch, land
 ```
 
-**Status: beta.** The loop runs daily on its own repositories, which is also
-how its defects get found.
+**Status: beta, 0.2.0.** The loop runs daily on its own repositories, which is
+also how its defects get found — and fixed, by the loop, as pull requests it
+opens against itself.
 
-### Six repositories, one thesis
+### Five repositories, one thesis
 
 Agents should earn autonomy the way engineers do — by track record, in writing,
 revocably. Each repository is usable alone; together they read as one sentence.
@@ -40,21 +47,18 @@ flowchart LR
     CART["coxswain-cartridges<br/>who a run works for<br/>roles → skills · tier → model · where writes land"]
     GRAPHS["coxswain-graphs<br/>what runs, and the harness that runs it<br/>sequence · the gate · the ledger · worktrees"]
     CREW["coxswain-crew<br/>who speaks<br/>named seats · write authority · voices"]
-    HUD["coxswain-hud<br/>where you hear and see it<br/>wake word · the regatta · run events"]
-    TOOLS["coxswain-tools<br/>the cox command<br/>run records · traces · landing · screens"]
+    TOOLS["coxswain-tools<br/>the cox command<br/>run records · landing · the leader lock · cox home"]
     UMB -- "pins every component" --> CART
     CART -- "roles, tiers" --> GRAPHS
     CREW -- "seats bound by a cartridge's cast: block" --> CART
-    GRAPHS -- "run records, usage, ledger" --> HUD
-    TOOLS -- "reads and lands" --> GRAPHS
-    TOOLS -- "posts" --> HUD
+    GRAPHS -- "run records, usage, ledger" --> TOOLS
+    TOOLS -- "files, launches, lands" --> GRAPHS
 ```
 
 [**coxswain**](https://github.com/ppfenning/coxswain) ·
 [**coxswain-cartridges**](https://github.com/ppfenning/coxswain-cartridges) ·
 [**coxswain-graphs**](https://github.com/ppfenning/coxswain-graphs) ·
 [**coxswain-crew**](https://github.com/ppfenning/coxswain-crew) ·
-[**coxswain-hud**](https://github.com/ppfenning/coxswain-hud) ·
 [**coxswain-tools**](https://github.com/ppfenning/coxswain-tools)
 
 - A **graph** owns sequence and writes nothing; one **harness** owns every
@@ -65,8 +69,9 @@ flowchart LR
   ledger row, so nothing can ratchet up its own trust. Demotion comes from
   measured signals, never model opinion.
 - **Every change arrives as a pull request**, rebased onto the target's default
-  branch and held until the project's own checks pass. What the harness may do
-  on its own is a cartridge policy, not a hard-coded behaviour.
+  branch and held until the project's own checks pass. How far the harness may
+  go on its own is a cartridge policy with four named levels, tighten-only
+  through the chain, never a hard-coded behaviour.
 - An **epic driver** takes an initiative from idea to a stack of pull requests —
   phases in dependency order, tasks fanned out in parallel worktrees, each under
   its own budget ceiling.
