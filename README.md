@@ -12,6 +12,7 @@ blindly.
 [**Docs**](https://ppfenning.github.io/coxswain/latest/) ·
 [**Install**](https://ppfenning.github.io/coxswain/latest/install/) ·
 [**Releases**](https://ppfenning.github.io/coxswain/latest/releases/) ·
+[**Customize**](https://ppfenning.github.io/coxswain/latest/customize/) ·
 [**PyPI**](https://pypi.org/project/coxswain-tools/)
 
 Coxswain builds software with a crew of AI agents and keeps a person on the
@@ -27,14 +28,20 @@ every run leaves a record you can read, drill into, and get a notification
 from.
 
 ```sh
-uv tool install coxswain-tools     # or: brew install ppfenning/coxswain/cox
-cox setup doctor
-cox                                # the coxswain session: file, launch, land
+uv tool install coxswain-tools
+cox setup doctor                                 # can this machine run an epic, and what is missing
+cox route file  --repo R --title T --body FILE   # a work item, from a sentence or a file
+cox route launch epic --initiative work/<id>     # plan → build → review ×2 → arbitrate → check → validate
+cox runs top                                     # every run in flight, live
+cox runs land <run> --repo R --apply             # rebase, PR, merge on green, clean up
 ```
 
-**Status: beta, 0.2.0.** The loop runs daily on its own repositories, which is
-also how its defects get found — and fixed, by the loop, as pull requests it
-opens against itself.
+**Status: beta.** The loop runs daily on its own repositories, which is also
+how its defects get found — and fixed, by the loop, as pull requests it opens
+against itself. Components are tagged in lockstep and `coxswain-tools` is
+published to PyPI from its tag; the
+[release notes](https://ppfenning.github.io/coxswain/latest/releases/) say what
+each version changed.
 
 ### Five repositories, one thesis
 
@@ -78,10 +85,13 @@ flowchart LR
 - **Two runners, one contract.** Nodes run against the Messages API, or as
   headless Claude Code sessions on a subscription with per-role tool grants, a
   disposable scratch tree for the builder, dollar ceilings per tier, and a
-  turn-by-turn trace. Every run writes what each node cost.
+  turn-by-turn trace. Every run writes what each node cost, a task that fails
+  its budget is split rather than given more money, and a weekly spend ceiling
+  stops new launches before the bill does.
 - **A standing cast of named seats** — recon, triage, review, build, ops, the
-  board, writing, the scribe — defined with no employer inside them, and bound
-  to a team's skills by a cartridge. Voice is decoration: every seat works typed.
+  board, writing, the scribe, the steward, the courier — defined with no
+  employer inside them, and bound to a team's skills by a cartridge. Voice is
+  decoration: every seat works typed.
 - **Deterministic work is a tool, not a turn.** Summing a run's cost, counting
   what a traced node did, cleaning up after a run, drawing the live table: each
   is a tested function a seat calls, so no tokens are spent producing the same
