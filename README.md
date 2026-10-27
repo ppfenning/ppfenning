@@ -63,10 +63,7 @@ flowchart LR
 ```
 
 [**coxswain**](https://github.com/ppfenning/coxswain) ·
-[**coxswain-cartridges**](https://github.com/ppfenning/coxswain-cartridges) ·
-[**coxswain-graphs**](https://github.com/ppfenning/coxswain-graphs) ·
-[**coxswain-crew**](https://github.com/ppfenning/coxswain-crew) ·
-[**coxswain-tools**](https://github.com/ppfenning/coxswain-tools)
+[**coxswain-dash**](https://github.com/ppfenning/coxswain-dash) ·
 
 - A **graph** owns sequence and writes nothing; one **harness** owns every
   consequence — the gate, the worktree, the checks, the append-only ledger. A
